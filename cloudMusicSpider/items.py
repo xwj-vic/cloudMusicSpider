@@ -7,3 +7,4 @@ class CloudmusicspiderItem(scrapy.Item):
     listener = scrapy.Field()  # 人数
     author = scrapy.Field()  # 作者
     photo = scrapy.Field()  # 图片
+    image_path = scrapy.Field()  # 下载的图片本地路径

@@ -62,9 +62,13 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'cloudMusicSpider.pipelines.CloudmusicspiderPipeline': 300,
-    'cloudMusicSpider.mongodbPipelines.MongoDBPipeline': 400,
+    'cloudMusicSpider.pipelines.CloudmusicspiderPipeline': 300,
+    'cloudMusicSpider.imagesPipelines.CloudMusicImgsPipeline': 1,
+    # 'cloudMusicSpider.mongodbPipelines.MongoDBPipeline': 500,
 }
+# 下载图片设置
+IMAGES_STORE = 'img'
+IMAGES_EXPIRES = 30  # 下载图片时效性为30天
 
 # MongoDB配置
 MONGO_HOST = "127.0.0.1"
